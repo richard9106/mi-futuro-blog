@@ -1,0 +1,79 @@
+{
+  "nav": {
+    "title": "Mi Futuro"
+  },
+  "sidebar": {
+    "label": "PROFILE",
+    "role": "Machine Operator → Software Developer",
+    "language": "Language",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "email": "Email",
+    "website": "Website",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "nav": {
+      "home": "Home",
+      "journey": "Journey",
+      "technologies": "Technologies"
+    }
+  },
+  "hero": {
+    "title": "Career Transformation",
+    "subtitle": "From operating machines on the factory floor to building digital solutions. This is my journey from machine operator to software developer.",
+    "from": {
+      "title": "Machine Operator",
+      "description": "Years working with industrial machinery"
+    },
+    "to": {
+      "title": "Software Developer",
+      "description": "Building the future with code"
+    },
+    "cta": "Discover My Journey"
+  },
+  "journey": {
+    "title": "The Journey",
+    "steps": {
+      "0": {
+        "title": "The Starting Point",
+        "description": "I began my career as a machine operator, working in manufacturing and production. Handling industrial machinery, ensuring quality control, and maintaining precision in every task taught me the value of discipline, attention to detail, and systematic thinking.",
+        "tags": ["Manufacturing", "Production", "Quality Control"]
+      },
+      "1": {
+        "title": "The Spark",
+        "description": "The realization that I wanted to create, build, and solve problems in a different way. I discovered my passion for technology and coding, starting with self-learning, online courses, and eventually enrolling in a coding bootcamp.",
+        "tags": ["Self-Learning", "Online Courses", "Coding Bootcamp"]
+      },
+      "2": {
+        "title": "Learning to Code",
+        "description": "Immersed myself in JavaScript, HTML, CSS, and modern frameworks like React and Vue. Each line of code became a building block, each project a stepping stone toward my new career path.",
+        "tags": ["JavaScript", "HTML/CSS", "React", "Vue"]
+      },
+      "3": {
+        "title": "Building the Future",
+        "description": "Now, I'm a full-stack developer specializing in Nuxt.js, building web applications and continuously learning. This blog is a testament to my transformation and a platform to share my experiences.",
+        "tags": ["Full-Stack", "Nuxt.js", "Projects", "Portfolio"]
+      }
+    }
+  },
+  "skills": {
+    "title": "Skills & Technologies",
+    "items": {
+      "0": {
+        "name": "Frontend Development",
+        "description": "Creating beautiful, responsive user interfaces with modern frameworks"
+      },
+      "1": {
+        "name": "UI/UX Design",
+        "description": "Designing intuitive and engaging user experiences"
+      },
+      "2": {
+        "name": "Backend Development",
+        "description": "Building robust server-side applications and APIs"
+      }
+    }
+  },
+  "footer": {
+    "text": "Built with Nuxt.js & Nuxt UI • 2024"
+  }
+}

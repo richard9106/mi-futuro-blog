@@ -1,0 +1,79 @@
+{
+  "nav": {
+    "title": "Mi Futuro"
+  },
+  "sidebar": {
+    "label": "PERFIL",
+    "role": "Operario de Máquina → Desarrollador de Software",
+    "language": "Idioma",
+    "navigation": "Navegación",
+    "contact": "Contacto",
+    "email": "Correo",
+    "website": "Página web",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "nav": {
+      "home": "Inicio",
+      "journey": "Viaje",
+      "technologies": "Tecnologías"
+    }
+  },
+  "hero": {
+    "title": "Transformación Profesional",
+    "subtitle": "Desde operar máquinas en la fábrica hasta construir soluciones digitales. Este es mi viaje de operario de máquina a desarrollador de software.",
+    "from": {
+      "title": "Operario de Máquina",
+      "description": "Años trabajando con maquinaria industrial"
+    },
+    "to": {
+      "title": "Desarrollador de Software",
+      "description": "Construyendo el futuro con código"
+    },
+    "cta": "Descubre Mi Viaje"
+  },
+  "journey": {
+    "title": "El Viaje",
+    "steps": {
+      "0": {
+        "title": "El Punto de Partida",
+        "description": "Comencé mi carrera como operario de máquina, trabajando en manufactura y producción. Manejar maquinaria industrial, asegurar control de calidad y mantener la precisión en cada tarea me enseñó el valor de la disciplina, la atención al detalle y el pensamiento sistemático.",
+        "tags": ["Manufactura", "Producción", "Control de Calidad"]
+      },
+      "1": {
+        "title": "La Chispa",
+        "description": "La realización de que quería crear, construir y resolver problemas de una manera diferente. Descubrí mi pasión por la tecnología y la programación, comenzando con autoaprendizaje, cursos en línea y eventualmente inscribiéndome en un bootcamp de programación.",
+        "tags": ["Autoaprendizaje", "Cursos Online", "Bootcamp de Programación"]
+      },
+      "2": {
+        "title": "Aprendiendo a Programar",
+        "description": "Me sumergí en JavaScript, HTML, CSS y frameworks modernos como React y Vue. Cada línea de código se convirtió en un bloque de construcción, cada proyecto un escalón hacia mi nueva carrera.",
+        "tags": ["JavaScript", "HTML/CSS", "React", "Vue"]
+      },
+      "3": {
+        "title": "Construyendo el Futuro",
+        "description": "Ahora, soy un desarrollador full-stack especializado en Nuxt.js, construyendo aplicaciones web y aprendiendo continuamente. Este blog es un testimonio de mi transformación y una plataforma para compartir mis experiencias.",
+        "tags": ["Full-Stack", "Nuxt.js", "Proyectos", "Portfolio"]
+      }
+    }
+  },
+  "skills": {
+    "title": "Habilidades y Tecnologías",
+    "items": {
+      "0": {
+        "name": "Desarrollo Frontend",
+        "description": "Creando interfaces de usuario hermosas y responsivas con frameworks modernos"
+      },
+      "1": {
+        "name": "Diseño UI/UX",
+        "description": "Diseñando experiencias de usuario intuitivas y atractivas"
+      },
+      "2": {
+        "name": "Desarrollo Backend",
+        "description": "Construyendo aplicaciones y APIs robustas del lado del servidor"
+      }
+    }
+  },
+  "footer": {
+    "text": "Construido con Nuxt.js & Nuxt UI • 2024"
+  }
+}
