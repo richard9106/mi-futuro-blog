@@ -22,7 +22,7 @@
           <!-- Profile -->
           <div class="flex items-center gap-4">
             <UAvatar
-              src="/profile.svg"
+              src="/mia.jpeg"
               alt="Profile"
               size="3xl"
               class="ring-4 ring-cyan-400/40 shadow-2xl shadow-cyan-500/20"
