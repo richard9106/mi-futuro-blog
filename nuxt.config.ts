@@ -4,6 +4,9 @@ export default defineNuxtConfig({
     '@nuxt/ui'
   ],
   css: ['~/assets/css/main.css'],
+  nitro: {
+    preset: 'cloudflare-pages'
+  },
   app: {
     head: {
       title: 'Mi Futuro - Career Transformation',
