@@ -84,3 +84,17 @@ MIT
 The live pages are `pages/index.vue` (Spanish) and `pages/index-en.vue` (English). They use page-specific SEO metadata, canonical URLs and language alternates. Existing `locales/` files are legacy reference content; an i18n module is not currently enabled. Shared navigation lives in `layouts/default.vue`.
 
 Cloudflare Pages is connected to the GitHub repository and publishes `main`. Validate with `npm ci` and `npm run build`, check both language pages and a narrow viewport, then review the Cloudflare Pages check for the released commit. An older separate Workers Builds integration may also appear in GitHub; it is not the successful Pages deployment for this site.
+
+## SEO and crawlability
+
+`composables/useProfileSeo.ts` renders the language-specific title/description, canonical URLs, reciprocal `hreflang` links (including x-default), social previews and a ProfilePage/Person/WebSite JSON-LD graph on the server. The marked-up identity, employer, city and technologies match visible portfolio content. There are no invented ratings, job offers or article records. Google does not guarantee rich results or rankings from markup.
+
+`public/sitemap.xml` contains only the two canonical published pages, with language alternates. Update its `lastmod` only after substantive content changes. `public/robots.txt` advertises the sitemap and permits public crawling; Cloudflare may prepend its existing managed bot directives. Do not block the JavaScript or stylesheet assets needed for rendering.
+
+The error page preserves Nuxt's 404/error response and adds noindex. The server middleware redirects the exact www hostname to HTTPS apex and normalizes `/index-en/`. Because Cloudflare Pages needs the hostname connected before an origin request can work, the edge www redirect is also configured in Cloudflare. Validate HTTPS/apex/www, path and query preservation, both source HTML documents, sitemap XML, robots, social image and an actual missing URL after release.
+
+References: https://developers.google.com/search/docs/appearance/structured-data/profile-page , https://developers.google.com/search/docs/crawling-indexing/localized-versions , https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap . Submit `https://rmarles.com/sitemap.xml` in the rmarles.com Search Console property when available; publishing a sitemap does not itself request or guarantee indexing.
+
+## Supporting the project
+
+The `#support` section in `CareerHighlights.vue` links to the existing GoFundMe campaign in both languages. It describes NuviaMy as an independent commercial software project and directs visitors to the campaign for the budget and updates. It does not embed a third-party payment widget, collect payment details or claim charitable/tax-exempt status. Update `fundraiserUrl` there if the campaign address changes.

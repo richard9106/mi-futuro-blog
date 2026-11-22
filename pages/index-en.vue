@@ -3,14 +3,12 @@
     <!-- Hero -->
     <section id="top" class="max-w-6xl mx-auto">
       <div class="text-center mb-10">
-        <h1 class="text-5xl md:text-7xl font-black mb-4">
-          <span class="block bg-gradient-to-r from-cyan-400 via-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent bg-gradient-animated">
-            Python backend.
-            Products in production.
-          </span>
+        <h1 class="text-4xl md:text-6xl font-black mb-4 leading-tight">
+          <span class="block text-white mb-3">Richard Marles</span>
+          <span class="block text-3xl md:text-5xl bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Python & Django backend developer</span>
         </h1>
         <p class="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed drop-shadow-lg">
-          I’m Richard Marles, a Backend Software Engineer and Senior Odoo Developer at MAGAPOR. I also created NuviaMy, a platform for therapists built with Django and hosted on AWS.
+          Based in Zaragoza, Spain, I’m a Backend Software Engineer and Senior Odoo Developer at MAGAPOR. I also created NuviaMy, a platform for therapists built with Django and hosted on AWS.
         </p>
       </div>
 
@@ -264,16 +262,7 @@
 </template>
 
 <script setup lang="ts">
-useSeoMeta({
-  title: 'Richard Marles | Python Backend Engineer & NuviaMy Creator', description: 'Senior Odoo Developer at MAGAPOR and creator of NuviaMy. Python, Django, API integrations, PostgreSQL, Docker and AWS experience.',
-  ogTitle: 'Richard Marles | Python Backend Engineer & NuviaMy Creator', ogDescription: 'Senior Odoo Developer at MAGAPOR and creator of NuviaMy. Python, Django, API integrations, PostgreSQL, Docker and AWS experience.',
-  ogType: 'website', ogUrl: 'https://rmarles.com/index-en', twitterCard: 'summary'
-})
-useHead({ htmlAttrs: { lang: 'en' }, link: [
-  { rel: 'canonical', href: 'https://rmarles.com/index-en' },
-  { rel: 'alternate', hreflang: 'es', href: 'https://rmarles.com/' },
-  { rel: 'alternate', hreflang: 'en', href: 'https://rmarles.com/index-en' }
-] })
+useProfileSeo('en')
 
 const scrollToSection = (id: string) => {
   const element = document.getElementById(id)
