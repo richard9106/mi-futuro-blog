@@ -5,11 +5,12 @@
       <div class="text-center mb-10">
         <h1 class="text-5xl md:text-7xl font-black mb-4">
           <span class="block bg-gradient-to-r from-cyan-400 via-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent bg-gradient-animated">
-            Career Transformation
+            Python backend.
+            Products in production.
           </span>
         </h1>
         <p class="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed drop-shadow-lg">
-          From operating machines on the factory floor to building digital solutions. This is my journey from machine operator to software developer.
+          I’m Richard Marles, a Backend Software Engineer and Senior Odoo Developer at MAGAPOR. I also created NuviaMy, a platform for therapists built with Django and hosted on AWS.
         </p>
       </div>
 
@@ -36,8 +37,8 @@
                   <UIcon name="i-heroicons-computer-desktop" class="w-7 h-7 text-white" />
                 </div>
                 <div>
-                  <h3 class="text-xl font-extrabold text-white">Software Developer</h3>
-                  <p class="text-cyan-200">Building the future with code</p>
+                  <h3 class="text-xl font-extrabold text-white">Backend Software Engineer</h3>
+                  <p class="text-cyan-200">Python, Django, APIs and Odoo</p>
                 </div>
               </div>
             </div>
@@ -47,14 +48,16 @@
 
       <div class="text-center">
         <button
-          @click="scrollToSection('journey')"
+          @click="scrollToSection('experience')"
           class="inline-flex items-center px-8 py-4 text-base md:text-lg font-bold text-white bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 rounded-xl shadow-2xl shadow-purple-500/40 hover:shadow-purple-500/60 transform hover:scale-[1.03] transition-all duration-300"
         >
-          Discover My Journey
+          Explore my experience
           <UIcon name="i-heroicons-arrow-down" class="ml-2 w-5 h-5" />
         </button>
       </div>
     </section>
+
+    <CareerHighlights language="en" />
 
     <!-- Journey -->
     <section id="journey" class="max-w-6xl mx-auto mt-16 md:mt-20">
@@ -261,6 +264,17 @@
 </template>
 
 <script setup lang="ts">
+useSeoMeta({
+  title: 'Richard Marles | Python Backend Engineer & NuviaMy Creator', description: 'Senior Odoo Developer at MAGAPOR and creator of NuviaMy. Python, Django, API integrations, PostgreSQL, Docker and AWS experience.',
+  ogTitle: 'Richard Marles | Python Backend Engineer & NuviaMy Creator', ogDescription: 'Senior Odoo Developer at MAGAPOR and creator of NuviaMy. Python, Django, API integrations, PostgreSQL, Docker and AWS experience.',
+  ogType: 'website', ogUrl: 'https://rmarles.com/index-en', twitterCard: 'summary'
+})
+useHead({ htmlAttrs: { lang: 'en' }, link: [
+  { rel: 'canonical', href: 'https://rmarles.com/index-en' },
+  { rel: 'alternate', hreflang: 'es', href: 'https://rmarles.com/' },
+  { rel: 'alternate', hreflang: 'en', href: 'https://rmarles.com/index-en' }
+] })
+
 const scrollToSection = (id: string) => {
   const element = document.getElementById(id)
   element?.scrollIntoView({ behavior: 'smooth' })
@@ -302,7 +316,7 @@ const journeySteps = [
   {
     title: 'Building the Future',
     description:
-      "Today I’m focused on Backend with Python (Django/Flask) and solutions with Odoo ERP. This blog is where I document my journey, projects, and lessons learned.",
+      "I now work as a Senior Odoo Developer at MAGAPOR and develop NuviaMy, my practice management platform for therapists. It brings Python, Django, PostgreSQL, Docker and AWS together in a live product.",
     tags: ['Backend', 'Python', 'Django', 'Odoo ERP']
   }
 ]
@@ -442,12 +456,13 @@ const skills = [
   },
   {
     name: 'Databases & Deploy',
-    description: 'PostgreSQL, Docker, and production best practices.',
+    description: 'PostgreSQL, Docker, AWS and deployments through GitHub Actions.',
     icon: 'i-heroicons-circle-stack'
   }
 ]
 
 const examples = [
+  { title: 'NuviaMy', description: 'My practice management platform for therapists, with a Django backend and AWS deployment.', tags: ['Python', 'Django', 'AWS', 'SaaS'], url: 'https://nuviamy.com/', glow: 'bg-gradient-to-r from-cyan-500/25 to-purple-500/25' },
   {
     title: 'The Elite VA - Courses',
     description: 'Courses platform for virtual assistants (Django + Nuxt.js).',
