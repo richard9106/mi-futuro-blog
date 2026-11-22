@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   modules: [
     '@nuxt/ui'
   ],
@@ -9,14 +9,14 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'Mi Futuro - Career Transformation',
+      title: 'Richard Marles | Backend Software Engineer',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'From machine operator to software developer - My career transformation journey' }
+        { name: 'description', content: 'Richard Marles: Python backend developer, Senior Odoo Developer at MAGAPOR and creator of NuviaMy.' }
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+        { rel: 'icon', type: 'image/svg+xml', href: '/profile.svg' }
       ]
     }
   }

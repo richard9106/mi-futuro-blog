@@ -16,7 +16,7 @@
     <div class="relative flex flex-col md:flex-row">
       <!-- Sidebar -->
       <aside
-        class="w-full md:fixed md:left-0 md:top-0 md:h-screen md:w-80 border-b md:border-b-0 md:border-r border-cyan-400/30 bg-gradient-to-b from-indigo-950/70 via-purple-950/60 to-pink-950/60 backdrop-blur-xl"
+        class="w-full md:fixed md:left-0 md:top-0 md:h-screen md:w-80 md:overflow-y-auto border-b md:border-b-0 md:border-r border-cyan-400/30 bg-gradient-to-b from-indigo-950/70 via-purple-950/60 to-pink-950/60 backdrop-blur-xl"
       >
         <div class="h-full p-6 flex flex-col gap-6">
           <!-- Profile -->
@@ -29,7 +29,7 @@
             />
             <div class="min-w-0">
               
-              <h1 class="text-xl font-black text-white truncate">Richard Marles</h1>
+              <p class="text-xl font-black text-white truncate">Richard Marles</p>
               <p class="text-sm text-white/70">{{ labels.role }}</p>
             </div>
           </div>
@@ -161,7 +161,7 @@ const labels = computed(() => {
   if (isEnglish.value) {
     return {
       profileLabel: 'PROFILE',
-      role: 'Full Stack Software Development · Code Institute',
+      role: 'Backend Software Engineer · Python & Django',
       language: 'Language',
       navigation: 'Navigation',
       contact: 'Contact',
@@ -170,18 +170,18 @@ const labels = computed(() => {
       github: 'GitHub',
       nav: {
         home: 'Home',
-        journey: 'Journey',
+        journey: 'Journey', experience: 'Experience', nuviamy: 'NuviaMy',
         technologies: 'Technologies',
         examples: 'Examples',
         topics: 'Other Topics'
       },
-      footer: 'Built with Nuxt.js & Nuxt UI • 2024'
+      footer: 'Built with Nuxt.js & Nuxt UI • 2026'
     }
   }
 
   return {
     profileLabel: 'PERFIL',
-    role: 'Full Stack Software Development · Code Institute',
+    role: 'Backend Software Engineer · Python & Django',
     language: 'Idioma',
     navigation: 'Navegación',
     contact: 'Contacto',
@@ -190,12 +190,12 @@ const labels = computed(() => {
     github: 'GitHub',
     nav: {
       home: 'Inicio',
-      journey: 'Viaje',
+      journey: 'Trayectoria', experience: 'Experiencia', nuviamy: 'NuviaMy',
       technologies: 'Tecnologías',
       examples: 'Ejemplos',
       topics: 'Otros temas'
     },
-    footer: 'Construido con Nuxt.js & Nuxt UI • 2024'
+    footer: 'Construido con Nuxt.js & Nuxt UI • 2026'
   }
 })
 
@@ -222,8 +222,8 @@ const goSpanish = async () => {
 
 const profile = {
   // If you want to show a website card later, set these:
-  website: '',
-  websiteLabel: '',
+  website: 'https://nuviamy.com/',
+  websiteLabel: 'NuviaMy · nuviamy.com',
   linkedin: 'https://www.linkedin.com/in/richard-marles/',
   linkedinLabel: 'linkedin.com/in/richard-marles',
   github: 'https://github.com/richard9106',
@@ -232,6 +232,8 @@ const profile = {
 
 const navItems = computed(() => [
   { to: `${route.path}#top`, icon: 'i-heroicons-home', label: labels.value.nav.home },
+  { to: `${route.path}#experience`, icon: 'i-heroicons-briefcase', label: labels.value.nav.experience },
+  { to: `${route.path}#nuviamy`, icon: 'i-heroicons-rocket-launch', label: labels.value.nav.nuviamy },
   { to: `${route.path}#journey`, icon: 'i-heroicons-bolt', label: labels.value.nav.journey },
   { to: `${route.path}#technologies`, icon: 'i-heroicons-command-line', label: labels.value.nav.technologies },
   { to: `${route.path}#examples`, icon: 'i-heroicons-square-3-stack-3d', label: labels.value.nav.examples },

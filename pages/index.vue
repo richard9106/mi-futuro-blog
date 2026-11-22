@@ -5,11 +5,12 @@
       <div class="text-center mb-10">
         <h1 class="text-5xl md:text-7xl font-black mb-4">
           <span class="block bg-gradient-to-r from-cyan-400 via-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent bg-gradient-animated">
-            Transformación Profesional
+            Backend con Python.
+            Productos en producción.
           </span>
         </h1>
         <p class="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed drop-shadow-lg">
-          Desde operar máquinas en la fábrica hasta construir soluciones digitales. Este es mi viaje de operario de máquina a desarrollador de software.
+          Soy Richard Marles, Backend Software Engineer y Desarrollador Senior Odoo en MAGAPOR. También soy el creador de NuviaMy, una plataforma para terapeutas desarrollada con Django y alojada en AWS.
         </p>
       </div>
 
@@ -36,8 +37,8 @@
                   <UIcon name="i-heroicons-computer-desktop" class="w-7 h-7 text-white" />
                 </div>
                 <div>
-                  <h3 class="text-xl font-extrabold text-white">Desarrollador de Software</h3>
-                  <p class="text-cyan-200">Construyendo el futuro con código</p>
+                  <h3 class="text-xl font-extrabold text-white">Backend Software Engineer</h3>
+                  <p class="text-cyan-200">Python, Django, APIs y Odoo</p>
                 </div>
               </div>
             </div>
@@ -47,14 +48,16 @@
 
       <div class="text-center">
         <button
-          @click="scrollToSection('journey')"
+          @click="scrollToSection('experience')"
           class="inline-flex items-center px-8 py-4 text-base md:text-lg font-bold text-white bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 rounded-xl shadow-2xl shadow-purple-500/40 hover:shadow-purple-500/60 transform hover:scale-[1.03] transition-all duration-300"
         >
-          Descubre Mi Viaje
+          Ver mi experiencia
           <UIcon name="i-heroicons-arrow-down" class="ml-2 w-5 h-5" />
         </button>
       </div>
     </section>
+
+    <CareerHighlights language="es" />
 
     <!-- Journey -->
     <section id="journey" class="max-w-6xl mx-auto mt-16 md:mt-20">
@@ -261,6 +264,17 @@
 </template>
 
 <script setup lang="ts">
+useSeoMeta({
+  title: 'Richard Marles | Backend Python, Django y NuviaMy', description: 'Desarrollador Senior Odoo en MAGAPOR y creador de NuviaMy. Experiencia con Python, Django, APIs, PostgreSQL, Docker y AWS.',
+  ogTitle: 'Richard Marles | Backend Python, Django y NuviaMy', ogDescription: 'Desarrollador Senior Odoo en MAGAPOR y creador de NuviaMy. Experiencia con Python, Django, APIs, PostgreSQL, Docker y AWS.',
+  ogType: 'website', ogUrl: 'https://rmarles.com/', twitterCard: 'summary'
+})
+useHead({ htmlAttrs: { lang: 'es' }, link: [
+  { rel: 'canonical', href: 'https://rmarles.com/' },
+  { rel: 'alternate', hreflang: 'es', href: 'https://rmarles.com/' },
+  { rel: 'alternate', hreflang: 'en', href: 'https://rmarles.com/index-en' }
+] })
+
 const scrollToSection = (id: string) => {
   const element = document.getElementById(id)
   element?.scrollIntoView({ behavior: 'smooth' })
@@ -302,7 +316,7 @@ const journeySteps = [
   {
     title: 'Construyendo el Futuro',
     description:
-      'Hoy mi enfoque está en Backend con Python (Django/Flask) y soluciones con Odoo ERP. Este blog es donde documento mi camino, proyectos y aprendizajes.',
+      'Actualmente trabajo como Desarrollador Senior Odoo en MAGAPOR y desarrollo NuviaMy, mi plataforma de gestión para terapeutas. Aplico Python, Django, PostgreSQL, Docker y AWS a un producto en producción.',
     tags: ['Backend', 'Python', 'Django', 'Odoo ERP']
   }
 ]
@@ -378,6 +392,7 @@ const skills = [
 ]
 
 const examples = [
+  { title: 'NuviaMy', description: 'Mi plataforma de gestión para terapeutas, con backend Django y despliegue en AWS.', tags: ['Python', 'Django', 'AWS', 'SaaS'], url: 'https://nuviamy.com/', glow: 'bg-gradient-to-r from-cyan-500/25 to-purple-500/25' },
   {
     title: 'The Elite VA - Courses',
     description: 'Plataforma de cursos para asistentes virtuales (Django + Nuxt.js).',
