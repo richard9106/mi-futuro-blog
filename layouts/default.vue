@@ -23,7 +23,7 @@
           <div class="flex items-center gap-4">
             <UAvatar
               src="/mia.jpeg"
-              alt="Profile"
+              alt="Richard Marles"
               size="3xl"
               class="ring-4 ring-cyan-400/40 shadow-2xl shadow-cyan-500/20"
             />
@@ -170,7 +170,7 @@ const labels = computed(() => {
       github: 'GitHub',
       nav: {
         home: 'Home',
-        journey: 'Journey', experience: 'Experience', nuviamy: 'NuviaMy',
+        journey: 'Journey', experience: 'Experience', nuviamy: 'NuviaMy', support: 'Support NuviaMy',
         technologies: 'Technologies',
         examples: 'Examples',
         topics: 'Other Topics'
@@ -190,7 +190,7 @@ const labels = computed(() => {
     github: 'GitHub',
     nav: {
       home: 'Inicio',
-      journey: 'Trayectoria', experience: 'Experiencia', nuviamy: 'NuviaMy',
+      journey: 'Trayectoria', experience: 'Experiencia', nuviamy: 'NuviaMy', support: 'Apoyar NuviaMy',
       technologies: 'Tecnologías',
       examples: 'Ejemplos',
       topics: 'Otros temas'
@@ -234,6 +234,7 @@ const navItems = computed(() => [
   { to: `${route.path}#top`, icon: 'i-heroicons-home', label: labels.value.nav.home },
   { to: `${route.path}#experience`, icon: 'i-heroicons-briefcase', label: labels.value.nav.experience },
   { to: `${route.path}#nuviamy`, icon: 'i-heroicons-rocket-launch', label: labels.value.nav.nuviamy },
+  { to: `${route.path}#support`, icon: 'i-heroicons-heart', label: labels.value.nav.support },
   { to: `${route.path}#journey`, icon: 'i-heroicons-bolt', label: labels.value.nav.journey },
   { to: `${route.path}#technologies`, icon: 'i-heroicons-command-line', label: labels.value.nav.technologies },
   { to: `${route.path}#examples`, icon: 'i-heroicons-square-3-stack-3d', label: labels.value.nav.examples },

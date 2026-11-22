@@ -46,11 +46,26 @@
         </div>
       </article>
     </section>
+    <section id="support" class="mt-10 scroll-mt-8 rounded-2xl border border-purple-300/25 bg-indigo-950/50 p-6 md:p-8" aria-labelledby="support-title">
+      <div class="grid lg:grid-cols-[1fr_auto] gap-7 items-center">
+        <div>
+          <p class="text-xs uppercase tracking-widest font-bold text-purple-200 mb-3">{{ copy.supportLabel }}</p>
+          <h2 id="support-title" class="text-2xl md:text-3xl font-extrabold text-white">{{ copy.supportTitle }}</h2>
+          <p class="text-white/80 leading-relaxed mt-4 max-w-3xl">{{ copy.supportDescription }}</p>
+          <p class="text-sm text-white/60 leading-relaxed mt-3 max-w-3xl">{{ copy.supportNote }}</p>
+        </div>
+        <div class="lg:max-w-64">
+          <a :href="fundraiserUrl" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-xl bg-purple-200 text-indigo-950 font-bold px-5 py-3 hover:bg-purple-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-purple-200"><UIcon name="i-heroicons-heart" class="w-5 h-5" aria-hidden="true" />{{ copy.supportCta }} ↗</a>
+          <p class="text-xs text-white/60 leading-relaxed mt-3">{{ copy.supportCheckout }}</p>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script setup lang="ts">
 const props = defineProps<{ language: 'es' | 'en' }>()
+const fundraiserUrl = 'https://www.gofundme.com/f/help-nuviamy-grow-so-therapists-can-focus-on-care'
 const projectStack = ['Python', 'Django', 'PostgreSQL', 'Docker', 'AWS', 'Stripe', 'Google Calendar', 'GitHub Actions']
 const content = {
   es: {
@@ -70,6 +85,10 @@ const content = {
     projectRole: 'Soy el creador y desarrollador del producto. Me encargo del diseño de la aplicación, el backend, las integraciones, el despliegue y el mantenimiento de la plataforma.',
     visit: 'Conocer NuviaMy', features: 'Explorar funcionalidades', builtTitle: 'Mi trabajo en el producto',
     screenshotAlt: 'Panel de NuviaMy con datos ficticios de demostración', screenshotCaption: 'Vista del producto con datos ficticios de demostración.',
+    supportLabel: 'Apoya el proyecto', supportTitle: 'Ayúdame a seguir construyendo NuviaMy.',
+    supportDescription: 'Tu apoyo contribuye al desarrollo, las pruebas y los recursos técnicos del producto, y a acercarlo a más terapeutas. También puedes ayudar compartiendo la campaña con alguien a quien le interese el proyecto.',
+    supportNote: 'NuviaMy es un proyecto de software comercial independiente. En la campaña puedes consultar el objetivo, el desglose del presupuesto y las actualizaciones.',
+    supportCta: 'Apoyar en GoFundMe', supportCheckout: 'Las aportaciones se realizan en GoFundMe. Esta página no recoge datos de pago.',
     built: [
       { title: 'Backend y datos', text: 'Aplicación Django con PostgreSQL, separación de datos por consulta, permisos por rol y registro de actividad.' },
       { title: 'Integraciones', text: 'Suscripciones y pagos con Stripe, conexión con Google Calendar y videollamadas integradas mediante AWS.' },
@@ -94,6 +113,10 @@ const content = {
     projectRole: 'I created and develop the product, taking responsibility for application design, backend engineering, integrations, deployment and ongoing platform maintenance.',
     visit: 'Visit NuviaMy', features: 'Explore features', builtTitle: 'My work on the product',
     screenshotAlt: 'NuviaMy dashboard showing fictional demonstration data', screenshotCaption: 'Product preview with fictional demonstration data.',
+    supportLabel: 'Support the project', supportTitle: 'Help me keep building NuviaMy.',
+    supportDescription: 'Your support contributes to product development, testing and technical resources, and helps introduce NuviaMy to more therapists. Sharing the campaign with someone interested in the project is another way to help.',
+    supportNote: 'NuviaMy is an independent commercial software project. You can find the fundraising goal, budget breakdown and progress updates on the campaign page.',
+    supportCta: 'Support on GoFundMe', supportCheckout: 'Contributions are handled on GoFundMe. This page does not collect payment details.',
     built: [
       { title: 'Backend and data', text: 'Django application with PostgreSQL, practice-scoped data, role-based permissions and activity auditing.' },
       { title: 'Integrations', text: 'Stripe subscriptions and payments, Google Calendar connectivity and embedded video sessions through AWS.' },
